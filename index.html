@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="" type="">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
     <style>
         .message-container {
             position: fixed;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            max-width: 900px; 
-            padding: 10px;
-            background: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            border-radius: 25px;
-            z-index: 1000;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 80px; /* leaves room for input bar */
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         form {
@@ -46,7 +47,7 @@
     </style>
 </head>
 <body>
-    <div class="message-container">
+    <div id="message-container" class="message-container">
         <form>
             <input type="text" id="message-input">
             <button type="submit" id="send-button">Send</button>
