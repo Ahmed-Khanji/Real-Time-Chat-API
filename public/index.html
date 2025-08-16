@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiny Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="chat">
+    <section class="sidebar">
+      <h1>Chat</h1>
+
+      <label>Username
+        <input id="name" placeholder="Your name" />
+      </label>
+
+      <label>Room
+        <input id="room" value="global" />
+      </label>
+
+      <button id="join">Join</button>
+
+      <div class="users">
+        <h2>Online</h2>
+        <ul id="userList"></ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <ul id="messages"></ul>
+      <div id="typing"></div>
+
+      <form id="form" autocomplete="off">
+        <input id="input" placeholder="Write a message" />
+        <button>Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
