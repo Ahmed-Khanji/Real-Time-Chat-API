@@ -27,3 +27,5 @@ Open your browser: http://localhost:3000
 1. Enter a username and room name, then click Join.
 2. Start chatting in real time
 3. Open another browser tab/window to simulate multiple users.
+
+<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/e46a22e4-f116-483d-9530-2b948edbd518" />
